@@ -21,8 +21,18 @@ $(document).ready(function () {
 			}	
 			);
 	})
-	.mouseup(function () {
+	.mouseup(function() {
 		$('.ryu-throwing').hide();
+		$('.ryu-ready').show();
+	});
+	$(document).keydown(function(event) {
+		if(event.keyCode == 88){
+			$('.ryu-ready').hide();
+			$('.ryu-cool').show();
+		}
+	})
+	.keyup(function() {
+		$('.ryu-cool').hide();
 		$('.ryu-ready').show();
 	});
 })
